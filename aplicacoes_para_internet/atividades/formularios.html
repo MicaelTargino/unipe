@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+    <style>
+        #form1 {
+            text-align: center;
+        }
+        form#one {
+            border: 2px double black;
+            width: 50%;
+            margin:30px auto;
+            text-align:left;
+        }
+        form#one>legend, form#one fieldset>legend {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        form#one fieldset>legend {
+            background: #d4c3e0;
+            width: 100%;
+            padding: 5px 0;
+        }
+
+        form#one fieldset {
+            border: none;
+            margin-top: 10px;
+            text-align: left;
+            padding:10px  40px;
+        }
+        form#one fieldset input {
+            width: 70%;
+        }
+
+        .flex {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+        }
+        table, tr,th,td {
+            border: 1px double black;
+        }
+        form#two {
+            padding: 15px auto;
+        }
+        form#two table, form#three table {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="form1">
+        <h5>a) Formulário de pedido de empréstimo</h5>
+        <form id="one">
+            <legend>Loan Application</legend>
+            <fieldset>
+                <legend>Applicant Information:</legend>
+                <label for="fn">First Name:</label>
+                <input type="text" id="fn" placeholder="John"> <br>
+                <label for="ln">Last Name:</label>
+                <input type="text" id="ln" placeholder="Smith"> <br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="johnsmith@example.com"> <br>
+                <label for="ssid">Social Security id:</label>
+                <input type="number" id="ssid" placeholder="123456789"> <br>
+                <label for="dtf">Daytime Phone:</label>
+                <input type="number" id="dtf" placeholder="83927462830"> <br>
+                <label for="ef">Evening Phone:</label>
+                <input type="number" id="ef" placeholder="83927462830"> <br>
+            </fieldset>
+            <fieldset>
+                <legend>Loan Information:</legend>
+                <label for="select">Loan Type:</label>
+                <select name="" id="select">
+                    <option value="automobile">Automobile</option>
+                </select> <br>
+                <label for="amnt">Amount:</label>
+                <input type="number" id="amnt" placeholder="1530$"> <br>
+                <div class="flex">
+                    <label for="desc">Description</label>
+                    <textarea name="" id="desc" cols="50" rows="2">Application to dynamic the purchase of a toyota prius.</textarea> <br>
+                </div>
+                <label for="sbmt">Submit Application</label>
+                <input type="submit" id="sbmt" value="Apply For Loan">
+            </fieldset>
+        </form>
+
+        <form id="two">
+            <h5>b) Cadastro básico</h5>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label>Nome:</label></td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="">Sexo:</label></td>
+                        <td>
+                        <input type="radio" name="cartao" id="masc" value="Masculino">
+                        <label for="masc">Maculino</label>
+                        <input type="radio" name="cartao" id="fem" value="Feminino">
+                        <label for="fem">Feminino</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan=2>
+                            <label for="">Escolaridade:</label>
+                            <select name="" id="">
+                                <option value="">1 grau</option>
+                                <option value="">2 grau</option>
+                                <option value="">Superior</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+        <form id="three">
+            <h5>c) Cadastro de cartão de crédito para pagamento</h5>
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label>Número:</label></td>
+                        <td><input type="number"></td>
+                    </tr>
+                    <tr rowspan=2>
+                        <td><label for="">Bandeira:</label></td>
+                        <td>
+                            <div class="flex">
+                                <input id="v" type="radio" name="cartao" value="Visa">
+                            <label for="v">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl3KkaO3878QQ0YVZKWWE1GJmng9_piN4E9Gg_GSf7lw&s" width=100 alt="">
+                            </label>
+                            </div>
+                             <br>
+                            <div class="flex">
+                                <input id="mc" type="radio" name="cartao" value="MasterCard">    
+                            <label for="mc"><img width=100 src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRh0N0cZ5dE0llXt3XHp0dHaiXZQLL7AucV637DLCfXg&s" alt=""></label>
+                            
+                            </div><br>
+                            <div class="flex">
+                                <input id="ae" type="radio" name="cartao" value="AmericanExpress">    
+                                <label for="ae"><img width=100 src="data:image/png;base64,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" alt=""></label>    
+                            </div>
+                           </td>
+                    </tr>
+                    <tr>
+                        <td>Validade:</td>
+                        <td>
+                            <select name="" id="">
+                                <option value="">2012</option>
+                                <option value="">2013</option>
+                                <option value="">2014</option>
+                            </select>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </form>
+
+        <form id="four" style="width:200px; margin: 0 auto; text-align: left;">
+            <h5>d) Cadastro de laboratório de pesquisa</h5>
+            <fieldset>
+                <legend>
+                    Informações do Aquário
+                </legend>
+                <label for="ph">PH do Aquário:</label> <br>
+                <input type="radio" id="ph">
+                <label for="ph">Ácido</label>
+                <input type="radio" id="ph">
+                <label for="ph">Alcalino</label>
+                <br>
+                <fieldset>
+                    <legend>Peixes</legend>
+                    <label for="qtde">Quantidade</label>
+                    <input style="width: 50px" type="text" id="qtde">
+                    <br>
+                    <br>
+                    <label for="esp">Espécie:</label>
+                    <select name="" id="esp" style="width:70px">
+                        <option value="">Espada</option>
+                        <option value="">Molinésia</option>
+                        <option value="">Plati</option>
+                    </select>
+                </fieldset>
+                <br>
+                <label for="outros">Outros:</label>
+               <div id="outros">
+                <input type="checkbox" id="pedras">
+                <label for="pedras">Pedras</label> <br>
+                <input type="checkbox" id="plantas">
+                <label for="plantas">Plantas</label>
+               </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

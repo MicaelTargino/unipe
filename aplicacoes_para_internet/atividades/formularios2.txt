@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    form .input_field {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+    }
+</style>
+<body>
+
+    <form action="">
+        <div class="input_field">
+            <label for="en">Event Name</label>
+            <input id="en" type="text" required maxlength="100">
+        </div>
+        <div class="input_field">
+            <label for="sd">Start Date</label>
+            <input id="sd" type="date" required>
+        </div>
+        <div class="input_field">
+            <label for="ed">End date</label>
+            <input id="ed" type="date" required>
+        </div>
+        <div class="input_field">
+            <label for="ad">All day</label>
+            <input id="ad" type="checkbox">
+        </div>
+        <div class="input_field">
+            <label for="cl">Calendar</label>
+            <select id="cl" required>
+                <option value="" disabled>My calendar</option>
+                <option value="" >Conta1</option>
+                <option value="" >Conta2</option>
+                <option value="" >Conta3</option>
+            </select>
+        </div>
+        <div class="input_field">
+            <label for="dt">Details</label>
+            <textarea id="dt" col=30 row=3 minlength="30" maxlength="300"></textarea> 
+        </div>
+        <div class="input_field">
+            <button>Reset</button>
+            <button type="submit">Save</button>
+        </div>
+    </form>
+    
+</body>
+</html>

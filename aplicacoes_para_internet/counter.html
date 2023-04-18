@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        body {
+            background: black;
+            display: flex;
+            width: 100vw;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 80px;
+        ;
+        }
+        h3 {
+            color: green;
+            font-size: 44px;
+        }
+        h3 span {
+            color:white;
+        }
+        .btn {
+            padding: 5px 50px;
+            font-size: 35px;
+            border-radius: 10%;
+            color: white;
+            border: none;
+            transition: all 1;
+        }
+        .btn#add {
+            background: green;
+        }
+        .btn#add:hover, .btn#remove:hover {
+            transform: scale(1.05);
+        }
+        .btn#remove {
+            background: red;
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Counter: <span id="resultado">0</span></h3>
+    <div class="buttons">
+        <button id="add" class="btn">+</button>
+        <button id="remove" class="btn">-</button>
+    </div>
+    
+    <script>
+        const span = document.querySelector('#resultado');
+        const btnAdd = document.querySelector('#add');
+        const btnRemove = document.querySelector('#remove');
+        var value = span.innerText;
+
+        btnAdd.addEventListener('click', () => {
+            value = parseInt(value) + 1;
+            span.innerHTML = value;
+        })
+        btnRemove.addEventListener('click', () => {
+            if (value > 0) {
+                value = parseInt(value) - 1;
+            }    
+            span.innerHTML = value;
+        })
+    </script>
+</body>
+</html>
